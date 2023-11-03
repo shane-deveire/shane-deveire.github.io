@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<h1>Hello World</h1>
-	<p>I'm hosted with GitHub Pages.</p>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="script.js"></script>
+	<title>BSP JSON Helper</title>
+</head>
+
+<body class="bg-slate-700 text-slate-100 p-10 flex flex-col gap-4">
+	<h1 class="text-2xl font-bold">BSP Styleguide Renderer Helper</h1>
+
+	<div class="bg-slate-800 rounded p-4 inline-block">
+		This tool strips the top level attributes: meta, jsonLinkedData. <br />
+		It also strips all src and nested src attributes.
+	</div>
+
+	<p>Paste the JSON you get from your _renderer=styleguide into the input box. The output should be automatically
+		copied to your clipboard.</p>
+
+	<p>This is useful if you have a `/examples/qa.json` to see quickly what is going on.</p>
+
+	<div class="flex gap-5">
+		<div class="flex flex-col gap-2">
+			<p>Input</p>
+			<textarea class="bg-slate-500" name="input" id="input" cols="30" rows="10"></textarea>
+		</div>
+		<div class="flex flex-col gap-2">
+			<p>Output</p>
+			<textarea class="bg-slate-500" name="output" id="output" cols="30" rows="10"></textarea>
+		</div>
+	</div>
+
+	<div id="message" class="mt-4 bg-emerald-500 text-white p-3 rounded hidden"></div>
+	<div id="error" class="mt-4 bg-rose-500 text-white p-3 rounded hidden"></div>
+
+
+
 </body>
+
 </html>
